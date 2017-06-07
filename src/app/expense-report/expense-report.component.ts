@@ -8,10 +8,19 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 })
 export class ExpenseReportComponent implements OnInit {
   form: FormGroup;
+  needsReceipt = false;
+
   constructor(private fb: FormBuilder) { }
 
-  ngOnInit() {
-    this.createForm();
+  async ngOnInit() {
+    await this.createForm();
+    this.form.get('expense.cost')!.valueChanges
+      .subscribe((cost: number) => {
+        console.log(cost);
+        if (cost >= 7500) {
+          this.needsReceipt = true;
+        }
+      });
   }
 
   createForm() {

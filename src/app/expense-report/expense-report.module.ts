@@ -9,8 +9,9 @@ import { ExpenseReportComponent } from './expense-report.component';
   imports: [
     ReactiveFormsModule,
     CommonModule,
-    ExpenseReportRoutingModule
+    ExpenseReportRoutingModule,
   ],
-  declarations: [ExpenseReportComponent]
+  declarations: [ExpenseReportComponent],
+  exports: [ExpenseReportComponent]
 })
 export class ExpenseReportModule { }
