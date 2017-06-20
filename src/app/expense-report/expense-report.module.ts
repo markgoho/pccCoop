@@ -6,12 +6,8 @@ import { ExpenseReportRoutingModule } from './expense-report-routing.module';
 import { ExpenseReportComponent } from './expense-report.component';
 
 @NgModule({
-  imports: [
-    ReactiveFormsModule,
-    CommonModule,
-    ExpenseReportRoutingModule,
-  ],
+  imports: [ReactiveFormsModule, CommonModule, ExpenseReportRoutingModule],
   declarations: [ExpenseReportComponent],
   exports: [ExpenseReportComponent]
 })
-export class ExpenseReportModule { }
+export class ExpenseReportModule {}
